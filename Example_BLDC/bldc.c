@@ -16,7 +16,7 @@ uint8_t BLDC_STATE_PREV[6] = {0,0,0,0,0,0};
 #endif
 
 // BLDC motor steps tables
-static const uint8_t BLDC_BRIDGE_STATE_FORWARD[8][6] =   // Motor steps
+static const uint8_t BLDC_BRIDGE_STATE_FORWARD[8][6] =   // Motor stepss
 {
 //	UH,UL		VH,VL	WH,WL
    { 0,0	,	0,0	,	0,0 },  // 0 //000
@@ -126,7 +126,7 @@ void BLDC_PWMTimerInit(void) {
 	TIM_TimeBaseStructure.TIM_RepetitionCounter = 0;
 	TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
 
-	// Channel 1, 2, 3 – set to PWM mode - all 6 outputs
+	// Channel 1, 2, 3 â€“ set to PWM mode - all 6 outputs
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_Timing;
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
 	TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
